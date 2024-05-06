@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+select {
+    @apply bg-cyan-200 px-2 py-1 rounded-md min-w-36;
+}
+
+.printable {
+    font-size: 1mm;
+    @apply border rounded shadow border-gray-300 bg-white overflow-hidden grid grid-cols-2 items-stretch justify-center;
+    gap: 1mm;
+    width: 210mm;
+    height: 297mm;
+    padding: 3mm;
+}
+
+@media print {
+    * {
+        display: none !important;
+    }
+    .printable {
+        display: grid !important;
+    }
+}
