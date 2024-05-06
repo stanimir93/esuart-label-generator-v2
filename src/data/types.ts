@@ -1,6 +1,6 @@
 export enum Lang {
-    en = 'EN',
-    cz = 'CZ',
+    en = 'EN 🇬🇧',
+    cz = 'CZ 🇨🇿',
 }
 
 export enum Scent {

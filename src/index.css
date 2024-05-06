@@ -3,12 +3,24 @@
 @tailwind utilities;
 
 select {
-    @apply bg-cyan-200 px-2 py-1 rounded-md min-w-36;
+    @apply bg-cyan-200 px-2 py-1 rounded-md min-w-16;
+}
+
+.button {
+    @apply border border-gray-900 px-5 py-2 rounded;
+}
+
+.button:hover {
+    @apply bg-cyan-300;
+}
+
+.button:active {
+    @apply opacity-75;
 }
 
 .printable {
     font-size: 1mm;
-    @apply border rounded shadow border-gray-300 bg-white overflow-hidden grid grid-cols-2 items-stretch justify-center;
+    @apply border rounded shadow border-gray-300 bg-white overflow-hidden grid grid-cols-2 items-center content-start justify-center;
     gap: 1mm;
     width: 210mm;
     height: 297mm;
@@ -16,10 +28,9 @@ select {
 }
 
 @media print {
-    * {
-        display: none !important;
-    }
     .printable {
-        display: grid !important;
+        border: none !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
     }
 }
